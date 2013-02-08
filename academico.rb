@@ -1,25 +1,34 @@
 ## Script to print my IFF report card on terminal
 ## TODO: implement features to tell if I passed, etc.
-require 'mechanize'
-require 'logger'
+require "rubygems"
+require "bundler/setup"
+require "capybara"
+require "capybara/dsl"
+require "capybara-webkit"
 
 class Agent
+  include Capybara::DSL
+
   def initialize
-    start_mech
+    start
   end
 
-  def start_mech
-    @mech = Mechanize.new
-    @mech.log = Logger.new $stderr
-    @mech.agent.http.debug_output = $stderr
+  def start
+    Capybara.run_server = false
+    Capybara.current_driver = :webkit
+    Capybara.app_host = 'http://www.academico.iff.edu.br/'
   end
 
   def login
-    page = @mech.get 'http://www.academico.iff.edu.br/qacademico/index.asp?t=1001'
+    visit '/qacademico/index.asp?t=1001'
     user = User.new
-    form = page.form_with name: 'frmLogin'
-    form.set_fields('LOGIN' => user.id, 'SENHA' => user.pass)
-    form.submit
+    fill_in 'LOGIN', with: user.id
+    fill_in 'SENHA', with: user.pass
+    click_button 'OK'
+  end
+
+  def grade
+    visit '/qacademico/index.asp?t=2032'
   end
 end
 
@@ -33,7 +42,7 @@ class User
 
   def get_info
     info = []
-    File.open('/home/bernardo/.iffudeu').each_line { |l| info << l.delete("\n") }
+    File.open('/home/bernardo/.academico').each_line { |l| info << l.delete("\n") }
     info
   end
 end
