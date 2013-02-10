@@ -17,10 +17,10 @@ Jeweler::Tasks.new do |gem|
   gem.name = "academico"
   gem.homepage = "http://github.com/bernardofire/academico"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Print my school grades at terminal}
   gem.email = "bernardo.fire@gmail.com"
   gem.authors = ["Bernardo B. Marques"]
+  gem.executables = ["aca"]
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
