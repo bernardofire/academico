@@ -79,7 +79,7 @@ class User
 
   def get_info
     info = []
-    File.open('/home/bernardo/.academico').each_line { |l| info << l.delete("\n") }
+    File.open('~/.academico').each_line { |l| info << l.delete("\n") }
     info
   end
 end
