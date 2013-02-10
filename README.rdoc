@@ -5,6 +5,35 @@ Why? Opening browser, going to the website, typing ID and password, clicking in 
 I'm tired just explaining.
 Make life simpler, automate stuff =]
 
+== Install
+not in rubygems yet, so:
+`git glone git@github.com:bernardofire/academico`
+`cd academico; rake install`
+Use the abbreviation to run the program: `aca`
+The output will be something like my (not fake) genius grades:
+
++---------------------------------------------+------+------+------+------+
+| Matéria                                     | 1ºBi | 2ºBi | 3ºBi | 4ºBi |
+| Português                                   | 10,0 | 10,0 | 10,0 | 10,0 |
+| Educação Física                             | 10,0 | 10,0 | 10,0 |      |
+| Matemática                                  | 10,0 | 10,0 | 10,0 |      |
+| Física                                      | 10,0 | 10,0 | 10,0 | 10,0 |
+| Química                                     | 10,0 | 10,0 | 10,0 |      |
+| Biologia                                    | 10,0 | 10,0 | 10,0 |      |
+| Geografia                                   | 10,0 | 10,0 | 10,0 |      |
+| História                                    | 10,0 | 10,0 | 10,0 | 10,0 |
+| Desenho                                     | 10,0 | 10,0 | 10,0 |      |
+| Filosofia                                   | 10,0 | 10,0 | 10,0 | 10,0 |
+| Sociologia                                  | 10,0 | 10,0 | 10,0 |      |
+| Programação                                 | 10,0 | 10,0 | 10,0 |      |
+| Eletricidade                                | 10,0 | 10,0 | 10,0 |      |
+| Eletrônica Digital                          | 10,0 | 10,0 | 10,0 | 10,0 |
+| Informática Aplicada                        | 10,0 | 10,0 | 10,0 |      |
++---------------------------------------------+------+------+------+------+
+
+PS: The blank spaces are notes that aren't avaiable yet.
+
+
 == Contributing to academico
 
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
