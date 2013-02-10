@@ -1,11 +1,13 @@
-= Academico
+ Academico
+ =========
 
 This is a tool to print my grades at terminal.
 Why? Opening browser, going to the website, typing ID and password, clicking in grades...
 I'm tired just explaining.
 Make life simpler, automate stuff =]
 
-== Install
+Install
+-------
 not in rubygems yet, so:
 `git glone git@github.com:bernardofire/academico`
 `cd academico; rake install`
@@ -34,7 +36,8 @@ The output will be something like my (not fake) genius grades:
 PS: The blank spaces are notes that aren't avaiable yet.
 
 
-== Contributing to academico
+Contributing to academico
+-------------------------
 
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
@@ -44,7 +47,8 @@ PS: The blank spaces are notes that aren't avaiable yet.
 * Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
 * Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
 
-== Copyright
+Copyright
+---------
 
 Copyright (c) 2013 Bernardo B. Marques. See LICENSE.txt for
 further details.
