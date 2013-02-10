@@ -6,6 +6,7 @@ require "bundler/setup"
 require "capybara"
 require "capybara/dsl"
 require "capybara-webkit"
+require 'terminal-table'
 
 class Agent
   include Capybara::DSL
@@ -44,8 +45,8 @@ class Grade
     create_table extract
   end
 
-  def create_table(info)
-    info #TODO: Implement this method
+  def create_table(rows)
+    Terminal::Table.new :rows => rows
   end
 
   def go_to_page
@@ -53,18 +54,18 @@ class Grade
   end
 
   def extract
-    info = { 'line_0' => ['Matéria', '1ºBi', '2ºBi', '3ºBi', '4ºBi'] }
+    rows = [ ['Matéria', '1ºBi', '2ºBi', '3ºBi', '4ºBi'] ]
     line = 1
     @agent.all(@grade_selector).each do |tr|
       all_tds = tr.all('td')
-      line_info = []
+      info = []
       [0, 5, 7, 13, 15] .each do |field|
-         line_info << all_tds[field].text
+         info << all_tds[field].text
       end
-      info["line_#{line}"] = line_info
+      rows << info
       line = line.next
     end
-    info
+    rows
   end
 end
 
