@@ -1,5 +1,5 @@
- Academico
- +++++++++
+Academico
+=========
 
 This is a tool to print my grades at terminal.
 Why? Opening browser, going to the website, typing ID and password, clicking in grades...
