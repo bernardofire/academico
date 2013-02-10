@@ -8,12 +8,17 @@ Make life simpler, automate stuff =]
 
 Install
 -------
-not in rubygems yet, so:
-`git glone git@github.com:bernardofire/academico`
-`cd academico; rake install`
-Use the abbreviation to run the program: `aca`
-The output will be something like my (not fake) genius grades:
+Not in rubygems yet, so:
 
+`git glone git@github.com:bernardofire/academico`
+
+`cd academico; rake install`
+
+Use the abbreviation to run the program: `aca`
+
+If you are perfect student (like me), the output will be something like this::
+
+```
 +---------------------------------------------+------+------+------+------+
 | Matéria                                     | 1ºBi | 2ºBi | 3ºBi | 4ºBi |
 | Português                                   | 10,0 | 10,0 | 10,0 | 10,0 |
@@ -32,6 +37,7 @@ The output will be something like my (not fake) genius grades:
 | Eletrônica Digital                          | 10,0 | 10,0 | 10,0 | 10,0 |
 | Informática Aplicada                        | 10,0 | 10,0 | 10,0 |      |
 +---------------------------------------------+------+------+------+------+
+```
 
 PS: The blank spaces are notes that aren't avaiable yet.
 
