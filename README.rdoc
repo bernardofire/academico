@@ -1,9 +1,12 @@
-= academico
+= Academico
 
-Description goes here.
+This is a tool to print my grades at terminal.
+Why? Opening browser, going to the website, typing ID and password, clicking in grades...
+I'm tired just explaining.
+Make life simpler, automate stuff =]
 
 == Contributing to academico
- 
+
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
 * Fork the project.
