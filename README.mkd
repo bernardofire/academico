@@ -14,6 +14,11 @@ Not in rubygems yet, so:
 
 `cd academico; rake install`
 
+Create a file in your home named: `.academico` with your informations, like this:
+
+`2012209310
+my_password_here`
+
 Use the abbreviation to run the program: `aca`
 
 If you are perfect student (like me), the output will be something like this::
