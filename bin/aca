@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift(File.expand_path(File.dirname(__FILE__) + "/../lib"))
+require "academico"
+
+if ARGV[0]
+  if ARGV[0] == 'register'
+    if ARGV[1] && ARGV[2]
+      User.register ARGV[1], ARGV[2]
+    else
+      puts "Use: aca [ID] [PASS]"
+    end
+  elsif ['help', '-h'].include? ARGV[0]
+    puts USAGE
+  else
+    puts "Invalid option. Use aca -h or --help to see usage"
+  end
+else
+  agent = Agent.new
+  agent.login
+  puts agent.grade
+end
