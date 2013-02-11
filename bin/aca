@@ -13,7 +13,7 @@ if ARGV[0]
   elsif ['help', '-h'].include? ARGV[0]
     puts USAGE
   else
-    puts "Invalid option. Use aca -h or --help to see usage"
+    puts "Invalid option. Use -h or --help to see usage"
   end
 else
   agent = Agent.new
