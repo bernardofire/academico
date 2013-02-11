@@ -70,9 +70,15 @@ class Grade
 end
 
 class User
+  @@file_path = "#{Dir.home}/.academico"
+
+  def register(id, pass)
+    File.open(@@file_path, 'w') { |f| f.write("#{id}\n#{pass}") }
+  end
+
   def info
     info = []
-    File.open("#{Dir.home}/.academico").each_line { |l| info << l.delete("\n") }
+    File.open(@@file_path).each_line { |l| info << l.delete("\n") }
     { id: info[0], pass: info[1] }
   end
 end
