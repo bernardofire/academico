@@ -1,11 +1,5 @@
 #encoding: utf-8
-## Script to print my IFF report card on terminal
-## TODO: implement features to tell if I passed, etc.
-require "rubygems"
-require "bundler/setup"
 require "capybara"
-require "capybara/dsl"
-require "capybara-webkit"
 require "terminal-table"
 
 class Agent
@@ -84,3 +78,14 @@ class User
     end
   end
 end
+
+USAGE = <<-EOF
+Academico is a tool to help IF students with the academical system.
+
+  Usage:
+    aca  # show your grades
+    aca register ID PASS  # register your user
+
+  Examples:
+    aca register 2012092390 secret_password
+  EOF
