@@ -23,9 +23,9 @@ class Agent
 
   def login
     visit '/qacademico/index.asp?t=1001'
-    user = User.new
-    fill_in 'LOGIN', with: user.id
-    fill_in 'SENHA', with: user.pass
+    user = User.new.info
+    fill_in 'LOGIN', with: user[:id]
+    fill_in 'SENHA', with: user[:pass]
     click_button 'OK'
   end
 
@@ -71,15 +71,10 @@ end
 
 class User
   attr_accessor :id, :pass
-  def initialize
-    info = get_info
-    @id = get_info[0]
-    @pass = get_info[1]
-  end
 
-  def get_info
+  def info
     info = []
     File.open("#{Dir.home}/.academico").each_line { |l| info << l.delete("\n") }
-    info
+    { id: info[0], pass: info[1] }
   end
 end
