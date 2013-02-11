@@ -67,7 +67,7 @@ class User
   class << self
     @@file_path = "#{Dir.home}/.academico"
 
-    def register(id, pass)
+    def new(id, pass)
       File.open(@@file_path, 'w') { |f| f.write("#{id}\n#{pass}") }
     end
 
@@ -84,8 +84,8 @@ Academico is a tool to help IF students with the academical system.
 
   Usage:
     aca  # show your grades
-    aca register ID PASS  # register your user
+    aca new ID PASS  # configure your user
 
   Examples:
-    aca register 2012092390 secret_password
+    aca new 2012092390 secret_password
   EOF

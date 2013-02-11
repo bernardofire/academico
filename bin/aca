@@ -4,12 +4,12 @@ $LOAD_PATH.unshift(File.expand_path(File.dirname(__FILE__) + "/../lib"))
 require "academico"
 
 if ARGV[0]
-  if ARGV[0] == 'register'
+  if ARGV[0] == 'new'
     if ARGV[1] && ARGV[2]
-      User.register ARGV[1], ARGV[2]
-      puts "Successfully registered user"
+      User.new ARGV[1], ARGV[2]
+      puts "Successfully configured user"
     else
-      puts "Use: aca register [ID] [PASS]"
+      puts "Use: aca new [ID] [PASS]"
     end
   elsif ['--help', '-h'].include? ARGV[0]
     puts USAGE
