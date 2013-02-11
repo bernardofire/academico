@@ -23,7 +23,7 @@ class Agent
 
   def login
     visit '/qacademico/index.asp?t=1001'
-    user = User.new.info
+    user = User.info
     fill_in 'LOGIN', with: user[:id]
     fill_in 'SENHA', with: user[:pass]
     click_button 'OK'
@@ -70,15 +70,17 @@ class Grade
 end
 
 class User
-  @@file_path = "#{Dir.home}/.academico"
+  class << self
+    @@file_path = "#{Dir.home}/.academico"
 
-  def register(id, pass)
-    File.open(@@file_path, 'w') { |f| f.write("#{id}\n#{pass}") }
-  end
+    def register(id, pass)
+      File.open(@@file_path, 'w') { |f| f.write("#{id}\n#{pass}") }
+    end
 
-  def info
-    info = []
-    File.open(@@file_path).each_line { |l| info << l.delete("\n") }
-    { id: info[0], pass: info[1] }
+    def info
+      info = []
+      File.open(@@file_path).each_line { |l| info << l.delete("\n") }
+      { id: info[0], pass: info[1] }
+    end
   end
 end
