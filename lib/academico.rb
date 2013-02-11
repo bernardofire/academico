@@ -6,7 +6,7 @@ require "bundler/setup"
 require "capybara"
 require "capybara/dsl"
 require "capybara-webkit"
-require 'terminal-table'
+require "terminal-table"
 
 class Agent
   include Capybara::DSL
@@ -79,7 +79,7 @@ class User
 
   def get_info
     info = []
-    File.open('~/.academico').each_line { |l| info << l.delete("\n") }
+    File.open("#{Dir.home}/.academico").each_line { |l| info << l.delete("\n") }
     info
   end
 end
