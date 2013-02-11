@@ -70,8 +70,6 @@ class Grade
 end
 
 class User
-  attr_accessor :id, :pass
-
   def info
     info = []
     File.open("#{Dir.home}/.academico").each_line { |l| info << l.delete("\n") }
