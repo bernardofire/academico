@@ -9,9 +9,9 @@ if ARGV[0]
       User.register ARGV[1], ARGV[2]
       puts "Successfully registered user"
     else
-      puts "Use: aca [ID] [PASS]"
+      puts "Use: aca register [ID] [PASS]"
     end
-  elsif ['help', '-h'].include? ARGV[0]
+  elsif ['--help', '-h'].include? ARGV[0]
     puts USAGE
   else
     puts "Invalid option. Use -h or --help to see usage"
