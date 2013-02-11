@@ -7,6 +7,7 @@ if ARGV[0]
   if ARGV[0] == 'register'
     if ARGV[1] && ARGV[2]
       User.register ARGV[1], ARGV[2]
+      puts "Successfully registered user"
     else
       puts "Use: aca [ID] [PASS]"
     end
