@@ -31,7 +31,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/bernardofire/academico"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.24"
+  s.rubygems_version = "1.8.11"
   s.summary = "Print my school grades at terminal"
 
   if s.respond_to? :specification_version then
