@@ -1,5 +1,6 @@
 #encoding: utf-8
 require "capybara"
+require "capybara-webkit"
 require "terminal-table"
 
 class Agent
