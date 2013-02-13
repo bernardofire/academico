@@ -1,19 +1,20 @@
 Academico
 =========
 
-This is a tool to print my grades at terminal.
-Why? Opening browser, going to the website, typing ID and password, clicking in grades...
-I'm tired just explaining.
-Make life simpler, automate stuff =]
+This is a tool to print grades at terminal, for "IF" students.
 
 Install
 -------
-Not in rubygems yet, so:
+`gem install academico`
+
+Or, from source:
 
 `git glone git@github.com:bernardofire/academico`
 
 `cd academico; rake install`
 
+Usage
+-----
 Configure your user and pass:
 
 `aca new ID PASS`
