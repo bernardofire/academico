@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
     "README.mkd",
     "Rakefile",
     "VERSION",
+    "academico.gemspec",
     "bin/aca",
     "lib/academico.rb"
   ]
