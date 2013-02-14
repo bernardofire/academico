@@ -41,7 +41,8 @@ class Grade
   end
 
   def create_table(rows)
-    Terminal::Table.new :rows => rows
+    Terminal::Table.new :rows => rows,
+                        :headings =>['Matéria', '1ºBi', '2ºBi', 'MS1', '3ºBi', '4ºBi', 'MS2', 'Final']
   end
 
   def go_to_page
@@ -49,7 +50,7 @@ class Grade
   end
 
   def extract
-    rows = [ ['Matéria', '1ºBi', '2ºBi', 'MS1', '3ºBi', '4ºBi', 'MS2', 'Final'] ]
+    rows = []
     line = 1
     @agent.all(@grade_selector).each do |tr|
       all_tds = tr.all('td')
