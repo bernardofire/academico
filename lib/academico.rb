@@ -49,12 +49,12 @@ class Grade
   end
 
   def extract
-    rows = [ ['Matéria', '1ºBi', '2ºBi', '3ºBi', '4ºBi'] ]
+    rows = [ ['Matéria', '1ºBi', '2ºBi', 'MS1', '3ºBi', '4ºBi', 'MS2', 'Final'] ]
     line = 1
     @agent.all(@grade_selector).each do |tr|
       all_tds = tr.all('td')
       info = []
-      [0, 5, 7, 13, 15] .each do |field|
+      [0, 5, 7, 9, 13, 15, 17, 23] .each do |field|
          info << all_tds[field].text
       end
       rows << info
