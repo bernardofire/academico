@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Bernardo B. Marques"]
-  s.date = "2013-02-13"
+  s.date = "2013-02-27"
   s.email = "bernardo.fire@gmail.com"
   s.executables = ["aca"]
   s.extra_rdoc_files = [
@@ -31,7 +31,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/bernardofire/academico"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.11"
+  s.rubygems_version = "1.8.24"
   s.summary = "Print my school grades at terminal"
 
   if s.respond_to? :specification_version then
