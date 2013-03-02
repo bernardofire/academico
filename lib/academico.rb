@@ -1,5 +1,6 @@
 #encoding: utf-8
 require "capybara"
+require "capybara-webkit"
 require "terminal-table"
 
 class Agent
@@ -40,7 +41,8 @@ class Grade
   end
 
   def create_table(rows)
-    Terminal::Table.new :rows => rows
+    Terminal::Table.new :rows => rows,
+                        :headings =>['Matéria', '1ºBi', '2ºBi', 'MS1', '3ºBi', '4ºBi', 'MS2', 'Final']
   end
 
   def go_to_page
@@ -48,13 +50,21 @@ class Grade
   end
 
   def extract
-    rows = [ ['Matéria', '1ºBi', '2ºBi', '3ºBi', '4ºBi'] ]
+    rows = []
     line = 1
     @agent.all(@grade_selector).each do |tr|
       all_tds = tr.all('td')
       info = []
-      [0, 5, 7, 13, 15] .each do |field|
-         info << all_tds[field].text
+      [0, 5, 7, 9, 13, 15, 17, 23].each do |field|
+        n = all_tds[field].text
+        if field != 0
+          if n.to_f >= 6.0
+            n = "\033[32m#{n}\033[m"
+          else
+            n = "\033[31m#{n}\033[m"
+          end
+        end
+        info << n
       end
       rows << info
       line = line.next
