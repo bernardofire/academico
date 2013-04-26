@@ -13,6 +13,8 @@ if ARGV[0]
     end
   elsif ['--help', '-h'].include? ARGV[0]
     puts USAGE
+  elsif ARGV[0] == 'id'
+    puts User.info[:id]
   else
     puts "Invalid option. Use -h or --help to see usage"
   end
