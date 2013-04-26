@@ -3,6 +3,8 @@
 $LOAD_PATH.unshift(File.expand_path(File.dirname(__FILE__) + "/../lib"))
 require "academico"
 
+#TODO: check if it's configured
+
 if ARGV[0]
   if ARGV[0] == 'new'
     if ARGV[1] && ARGV[2]
