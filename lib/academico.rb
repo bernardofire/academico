@@ -1,8 +1,8 @@
 #encoding: utf-8
 require "capybara"
-require "capybara-webkit"
 require "terminal-table"
 
+require "capybara-webkit"
 class Agent
   include Capybara::DSL
 
@@ -55,7 +55,7 @@ class Grade
     @agent.all(@grade_selector).each do |tr|
       all_tds = tr.all('td')
       info = []
-      [0, 5, 7, 9, 13, 15, 17, 23].each do |field|
+      [0, 5, 7, 9, 12, 14, 18, 22].each do |field|
         n = all_tds[field].text
         if field != 0
           if n.to_f >= 6.0
