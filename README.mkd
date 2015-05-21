@@ -9,7 +9,7 @@ Install
 
 Or, from source:
 
-`git glone git@github.com:bernardofire/academico`
+`git clone git@github.com:bernardofire/academico`
 
 `cd academico; rake install`
 
